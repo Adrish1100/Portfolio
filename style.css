@@ -1,0 +1,101 @@
+html{
+background-color: #000000;   
+}
+
+body {
+    color: white;
+}
+
+h1{
+    background-color: aqua; 
+    padding: 5px;
+    text-align: center;
+    border: 5px solid white;
+    border-radius: 50px;
+    font-family: "Courier New", Courier, monospace;
+    color: black ;
+}
+
+h3{
+    font-family: arial;
+    text-align: center;
+    padding: 15px;
+    background-color: wheat;
+    margin: 5px;
+    border: 3px solid white;
+    color: black;
+    
+}  
+
+marquee{
+        color: white;
+        font-family: "Courier New", courier, monospace;           
+        font-size: 20px;
+      }
+
+article{
+    background:#333;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid white;
+}
+
+footer{
+    border-top: 2px solid white;
+    margin-top: 30px;
+    padding-top: 15px;
+}
+
+      
+.navigate{
+    text-align: center; 
+    font-family: "Courier New", Courier, monospace; 
+    font-size: 18px;
+    color: #0AA;
+}
+
+.catch{
+        background-color: #333;
+        font-size: 16px;
+        border: 5px solid white;
+        border-radius: 20px;
+        font-family: cursive;
+        text-align: center;
+        padding: 5px;
+      }
+      
+.skills_title, .projects_title{
+        padding: 5px;
+        font-family: "Courier New", Courier, monospace;
+        color: #0AA;
+        
+}
+
+.description{
+    font-style: italic;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    margin: 15px;
+}
+.contact{
+    padding: 5px; 
+    font-family: "Courier New", Courier, monospace;
+    color: #0AA;   
+}
+.end{
+    text-align: end; 
+    font-family: Impact, Haettenschweiler;
+    font-size: 10px;
+}
+
+a {
+    color: #0AA; /* unvisited - matches your headings */
+    text-decoration: none;
+}
+a:visited {
+    color: #477; /* visited - desaturated teal, like #777 but aqua */
+}
+a:hover {
+    color: #0DD; /* hover - brighter, shows it's clickable */
+}

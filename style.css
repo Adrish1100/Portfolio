@@ -90,12 +90,11 @@ footer{
 }
 
 a {
-    color: #0AA; /* unvisited - matches your headings */
-    text-decoration: none;
+    color: #0AA;
 }
 a:visited {
-    color: #477; /* visited - desaturated teal, like #777 but aqua */
+    color: #477;
 }
 a:hover {
-    color: #0DD; /* hover - brighter, shows it's clickable */
+    color: #0DD; 
 }

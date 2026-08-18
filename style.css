@@ -1,13 +1,12 @@
-/* ========== UNIVERSALS ========== */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family:"poppins","segoe UI",sans-serif;
 }
-html{
- scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
-
 body{
    background-color: rgb(0,0,33);
    color:white;
@@ -15,20 +14,27 @@ body{
    overflow-x: hidden; 
 }
 
-/* ========== NAV ========== */
+hr{
+    height:2.5px;
+    background-color:#fff ;
+}
+
 nav{            
     display:flex;
     justify-content:space-around;
     align-items:center;           
     background-color:rgb(10,18,62);
-    height: 60px;
-    width: 100%; 
+    height: clamp(60px, 8vw, 100px);
+    width: 100%;
+    position:fixed;
+    top:0;
+    z-index:100;
 }
 
 nav ul{
     display:flex;
     justify-content:center;
-    gap:10px;
+    gap:clamp(10px, 2vw, 30px);
 }
 
 nav ul li{
@@ -38,21 +44,26 @@ nav ul li{
 nav ul li a{
     text-decoration:none;
     color:white;
-    font-size:0.6rem;
+    font-size:clamp(14px, 1.2vw, 18px);
+}
+
+nav ul li a:hover {
+    color: #9a15ff;
+    transition: 0.3s;
 }
 
 h1.left{
     text-align:center;
-    font-size:1rem;
+    font-size:clamp(18px, 2.5vw, 32px);
 }
 
-/* ========== FIRST SECTION ========== */
 .firstsection{
     display:flex;
     align-items:center;
     justify-content:space-around;
-    margin:23px;
+    margin:30px;
     height: 40vh;
+    scroll-margin-top:clamp(60px,8vw,100px);
 }
 
 .firstsection > div{
@@ -60,11 +71,12 @@ h1.left{
 }
 
 .leftsection{
-   font-size: 1.5rem;
+   font-size: clamp(24px, 4vw, 45px);
 }
 
 .rightsection img{
-    width: 100%;
+    width: max(90px,80%);
+    height: max(90px,70%);
     margin: 0 auto;
     display: block;
 }
@@ -74,27 +86,27 @@ h1.left{
     color: #9a15ff;
 }
 
-/* ========== SECOND SECTION ========== */
 .secondsection{
     display:flex;            
     flex-direction:column;
     margin:20px auto;
-    width:80vw;   
+    width:80vw;
+    scroll-margin-top:clamp(60px,8vw,100px);
 }
 
 .gray{
     color:gray;
-    font-size:0.8rem;
+    font-size:clamp(12px, 1.5vw, 25px);
 }
 
-/* ========== THIRD SECTION ========== */
 .thirdsection{
-     display:flex;            
+    display:flex;            
     flex-direction:column;
     margin:20px auto;
-    width:80vw;   
+    width:80vw;
+    scroll-margin-top:clamp(60px,8vw,100px);
 }
-.hrline{
+.box-container{
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -102,7 +114,7 @@ h1.left{
     width: 80vw;             
 }
 
-.vrline{
+.box{
     background-color: rgb(10,18,62); 
     width: 100%;            
     padding: 20px;          
@@ -110,39 +122,45 @@ h1.left{
     line-height:1.6;
 }
 
-.vrline h3{
+.box:hover {
+    transform: translateX(-5px);
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(255,255,255,1);
+}
+
+.box h3{
     margin: 0 0 10px 0;
-    font-size: 1rem;
+    font-size: clamp(18px, 2vw, 30px);
     color:white;
 }
 
-.vrline article{
+.box article{
     margin: 0;
     color: gray;
-    font-size: 0.9rem;
+    font-size: clamp(14px, 1.5vw, 25px);
 }
 
-/* ========== PROJECTS ========== */
 .projects{
     margin:20px auto;
     width: 80vw;
+    scroll-margin-top:clamp(60px,8vw,100px);
 }
 
 .links p{
-    font-size:1rem;
+    font-size:clamp(16px, 1.8vw, 25px);
 }
 .links a{
    color:#a00;
-   font-size:1rem;
+   font-size:clamp(16px, 1.8vw, 25px);
 }
 
-/* ========== CONTACT ========== */
-#contact{
+.contact{
     margin:20px auto;
     display:flex;            
     align-items:flex-start;
     flex-direction:column;
     width:80vw;
+    scroll-margin-top:clamp(60px,8vw,100px);
 }
 
 .form-group{
@@ -150,11 +168,18 @@ h1.left{
     align-items:flex-start;
     flex-direction:row;
     margin: 20px auto;
-    background-color: rgb(10,18,62); 
+    background-color: rgb(10,18,62);
+    font-size:clamp(16px, 1.8vw, 25px);
     width: 100%;            
-    padding: 20px;          
+    padding: 20px;
     border-radius: 12px;
     line-height:1.6;
+}
+
+.form-group:hover{
+    transform: translateX(-5px);
+    transition: 0.3s;
+    box-shadow: 0 0 25px rgba(255,255,255,1);
 }
 
 .form-group input, 
@@ -165,11 +190,15 @@ h1.left{
     width: 100%;
     color:white;
     text-align:center;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 10px;
 }
 
 button{
     margin: 20px auto;
-    background-color: rgb(10,18,62); 
+    background-color:rgba(50,50,150,0.8);
     width: 100%;            
     padding: 20px;
     color:white;         
@@ -177,24 +206,30 @@ button{
     line-height:1.6;
 }
 
-/* ========== FOOTER ========== */
+button:hover {
+    background-color: rgb(20,30,70);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
 footer{            
     display:flex;
     justify-content:space-around;
-    align-items:center;           
+    align-items:center;
     background-color:#1a1a1a;
     width: 100%;
     height:150px;
 }
+ 
 footer h2{
-    font-size:1rem;
+    font-size:clamp(16px, 1.5vw, 30px);
 }
 
 footer ul{
     display:flex;
     justify-content:center;
     flex-direction:column;
-    gap:1px;
+    gap:clamp(5px, 1vw, 15px);
 }
 
 footer ul li{
@@ -204,11 +239,11 @@ footer ul li{
 footer ul li a{
     text-decoration:none;
     color:white;
-    font-size:0.6rem;
+    font-size:clamp(14px, 1.2vw, 18px);
 }
 
 footer .left{
-   font-size:0.5rem;
+   font-size:clamp(14px, 1.2vw, 18px);
 }
 
 .footer-ul-parent{
@@ -221,37 +256,8 @@ hr.hide{
     visibility:hidden;
 }
 
-/* ========== MEDIA QUERY ========== */
 @media (min-width: 768px) {
-    nav{
-        height:100px;
-    }
-    nav ul{
-        gap:30px;
-    }
-    nav .left{
-        font-size:2rem;
-    }
-    nav ul li a{
-        font-size: 1.5rem;
-    }
-    .leftsection{
-        font-size:3rem;
-    }
-    
-    .rightsection img{
-        width:100%;
-        height: 100%;
-    }
-    .secondsection{
-        font-size:1.5rem;
-    }
-    .vrline h3{
-        font-size: 2rem;
-    }
-    .vrline article{
-        font-size: 1.5rem;
-    }
+
     .form-group{
         align-items:center;
         justify-content:center;
@@ -260,27 +266,15 @@ hr.hide{
     }       
     input,textarea{
         width: 45vw;
-        height: 3rem; 
-    }            
-    .links p{
-        font-size:1.5rem;
-    }           
-    .links a{
-        font-size:1.6rem;
     }
     footer{
         height:250px;
-    }    
-    footer h2{
-        font-size:3rem
-    }    
-    footer ul{
-        gap:30px;
     }
-    footer .left{
-        font-size:1.5rem;
-    }
-    footer ul li a{
-        font-size: 1rem;
+}
+
+@media(max-width:400px){
+    .firstsection{
+        flex-direction:column-reverse;
+        height:fit-content;
     }
 }

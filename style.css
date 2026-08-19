@@ -1,3 +1,5 @@
+/* =============Global============= */
+
 *{
     padding: 0;
     margin: 0;
@@ -7,6 +9,8 @@
 html {
     scroll-behavior: smooth;
 }
+
+
 body{
    background-color: rgb(0,0,33);
    color:white;
@@ -18,6 +22,12 @@ hr{
     height:2.5px;
     background-color:#fff ;
 }
+
+.gray{
+    color:gray;
+    font-size:clamp(12px, 1.5vw, 25px);
+}
+/* =============Navigation============= */
 
 nav{            
     display:flex;
@@ -57,6 +67,8 @@ h1.left{
     font-size:clamp(18px, 2.5vw, 32px);
 }
 
+/* =============First Section============= */
+
 .firstsection{
     display:flex;
     align-items:center;
@@ -86,6 +98,8 @@ h1.left{
     color: #9a15ff;
 }
 
+/* =============Second Section============= */
+
 .secondsection{
     display:flex;            
     flex-direction:column;
@@ -95,11 +109,7 @@ h1.left{
     scroll-margin-top:clamp(60px,8vw,100px);
 }
 
-.gray{
-    color:gray;
-    font-size:clamp(12px, 1.5vw, 25px);
-}
-
+/* =============Third Section============= */
 .thirdsection{
     display:flex;            
     flex-direction:column;
@@ -142,6 +152,7 @@ h1.left{
     font-size: clamp(20px, 2vw, 40px);
 }
 
+/* =============Project Section============= */
 .projects{
     margin:20px auto;
     width: 80vw;
@@ -165,18 +176,28 @@ h1.left{
 
 .carousel-wrapper img{
     width: 100%;
-    height: 10em;
     object-fit: cover;
     border-radius: 8px;
 }
 
-links p{
+.carousel-wrapper img.C{
+    height: 9.5em;
+    object-fit:contain;
+}
+
+.carousel-wrapper figcaption{
+    text-align:center;
+}
+
+.links p{
     font-size:clamp(16px, 1.8vw, 25px);
 }
 .links a{
    color:#a00;
    font-size:clamp(16px, 1.8vw, 25px);
 }
+
+/* =============Contact Section============= */
 
 .contact{
     margin:20px auto;
@@ -236,6 +257,7 @@ button:hover {
     transition: 0.3s;
 }
 
+/* =============Footer Section============= */
 footer{            
     display:flex;
     justify-content:space-around;
@@ -276,9 +298,7 @@ footer .left{
    gap:20px;
 }
 
-hr.hide{
-    visibility:hidden;
-}
+/* =============Media Queries============= */
 
 @media (min-width: 768px) {
     nav ul li a{
